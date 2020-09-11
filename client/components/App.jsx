@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from './Header'
+import Question from './Question'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <>
+    <Header/>
+    <Question/>
+    </>
   )
 }
 
