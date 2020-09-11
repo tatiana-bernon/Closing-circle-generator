@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { getStarters, getFinishers } from '../api'
 import nouns from '../../server/public/data/nouns'
 
-export class Button extends Component {
+export class Question extends Component {
   state = {
     starter_id: null,
     starter: '',
@@ -52,4 +52,4 @@ export class Button extends Component {
   }
 }
 
-export default Button
+export default Question
