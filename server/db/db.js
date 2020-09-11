@@ -5,7 +5,8 @@ const connection = require('knex')(config)
 module.exports = {
   getStarters,
   getFinishers,
-  saveQuestion
+  saveQuestion,
+  getQuestions
 }
 
 function getStarters (db = connection) {

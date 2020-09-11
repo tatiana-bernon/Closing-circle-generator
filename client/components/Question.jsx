@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getStarters, getFinishers } from '../api'
+import { getStarters, getFinishers, saveQuestion } from '../api'
 import nouns from '../../server/public/data/nouns'
 
 export class Button extends Component {
@@ -42,11 +42,18 @@ export class Button extends Component {
       })
   }
 
+  // save = () => {
+  //   const question = { question: this.state.starter + this.state.noun + this.state.finisher }
+    
+  //   saveQuestion(question)
+  // }
+
   render () {
     return (
       <div>
         <button onClick={this.generate}>Generate</button>
         <h2>{this.state.starter} {(this.state.noun).toLowerCase()} {this.state.finisher}</h2>
+        {/* <button onClick={this.save}>Save Question</button> */}
       </div>
     )
   }

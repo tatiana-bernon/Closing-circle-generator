@@ -13,3 +13,16 @@ export function getFinishers (id) {
     .get(URL + 'finishers/' + id)
     .then(response => response.body)
 }
+
+export function saveQuestion (question) {
+  console.log(question) 
+  return request
+    .post(URL + 'questions')
+    .send(question)
+}
+
+export function loadQuestion () { 
+  return request
+    .get(URL + 'questions/')
+    .then(response => response.body)
+}

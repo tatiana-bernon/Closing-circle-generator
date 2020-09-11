@@ -28,7 +28,9 @@ router.get('/finishers/:id', (req, res) => {
 
 // POST /api/v1
 router.post('/questions', (req, res) => {
-  db.saveQuestion()
+  console.log(req)
+  const newQuestion = req.body
+  db.saveQuestion(newQuestion)
     .then(question => {
       res.json(question)
     })
@@ -38,8 +40,8 @@ router.post('/questions', (req, res) => {
 })
 
 // GET /api/v1
-router.get('/questions', (req, res) => {
-  db.getQuestions
+router.get('/questions', (req, res) => {  
+  db.getQuestions()
     .then(questions => {
       res.json(questions)
     })
