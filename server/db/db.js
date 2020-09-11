@@ -19,8 +19,12 @@ function getFinishers (id, db = connection) {
     .select()
 }
 
-
 function saveQuestion (newQuestion, db = connection) {
   return db('questions')
     .insert(newQuestion)
+}
+
+function getQuestions (db = connection) {
+  return db('questions')
+    .select()
 }

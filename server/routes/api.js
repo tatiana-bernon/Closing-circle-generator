@@ -26,4 +26,26 @@ router.get('/finishers/:id', (req, res) => {
     })
 })
 
+// POST /api/v1
+router.post('/questions', (req, res) => {
+  db.saveQuestion()
+    .then(question => {
+      res.json(question)
+    })
+    .catch(err => {
+      res.status(500).send(err.message)
+    })
+})
+
+// GET /api/v1
+router.get('/questions', (req, res) => {
+  db.getQuestions
+    .then(questions => {
+      res.json(questions)
+    })
+    .catch(err => {
+      res.status(500).send(err.message)
+    })
+})
+
 module.exports = router
