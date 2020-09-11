@@ -4,7 +4,8 @@ const connection = require('knex')(config)
 
 module.exports = {
   getStarters,
-  getFinishers
+  getFinishers,
+  saveQuestion
 }
 
 function getStarters (db = connection) {
@@ -16,4 +17,10 @@ function getFinishers (id, db = connection) {
   return db('finishers')
     .where('starter_id', id)
     .select()
+}
+
+
+function saveQuestion (newQuestion, db = connection) {
+  return db('questions')
+    .insert(newQuestion)
 }
