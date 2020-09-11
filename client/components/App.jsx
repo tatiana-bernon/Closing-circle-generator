@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from './Header'
-import Button from './Button'
+import Question from './Question'
 
 const App = () => {
   return (
     <>
     <Header/>
-    <Button/>
+    <Question/>
     </>
   )
 }
