@@ -46,7 +46,7 @@ export class Button extends Component {
     return (
       <div>
         <button onClick={this.generate}>Generate</button>
-        <h2>{this.state.starter} {this.state.noun} {this.state.finisher}</h2>
+        <h2>{this.state.starter} {(this.state.noun).toLowerCase()} {this.state.finisher}</h2>
       </div>
     )
   }
