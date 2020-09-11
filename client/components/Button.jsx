@@ -47,7 +47,7 @@ export class Button extends Component {
   render () {
     return (
       <div>
-        <button onClick={this.generate}>Generate</button>
+        <p onClick={this.generate}>Generate</p>
       </div>
     )
   }
