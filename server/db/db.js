@@ -7,12 +7,12 @@ module.exports = {
   getFinishers
 }
 
-function getStarters () {
+function getStarters (db = connection) {
   return db('starters')
     .select()
 }
 
-function getFinishers (id) {
+function getFinishers (id, db = connection) {
   return db('finishers')
     .where('starter_id', id)
     .select()

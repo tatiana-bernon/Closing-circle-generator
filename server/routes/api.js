@@ -15,8 +15,9 @@ router.get('/starters', (req, res) => {
 })
 
 // GET /api/v1
-router.get('/finishers', (req, res) => {
-  db.getFinishers()
+router.get('/finishers/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.getFinishers(id)
     .then(finishers => {
       res.json(finishers)
     })

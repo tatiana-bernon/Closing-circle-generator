@@ -2,37 +2,44 @@ import React, { Component } from 'react'
 import { getStarters, getFinishers } from '../api'
 
 export class Button extends Component {
-state = {
-  starter_id: null,
-  starter: '',
-  noun: '',
-  finisher: ''
-}
+  state = {
+    starter_id: null,
+    starter: '',
+    noun: '',
+    finisher: ''
+  }
 
   getRandom = (array) => {
     const random = Math.floor(Math.random() * array.length)
     return {
       id: random,
-      sentencePart: array[random]
+      sentenceStarter: array[random].starter,
+      sentenceFinisher: array[random].finisher
     }
   }
+
+  // getRandomFinisher = (array) => {
+  //   const random = Math.floor(Math.random() * array.length)
+  //   return {
+  //     sentencePart: array[random].finisher
+  //   }
+  // }
 
   generate = () => {
     getStarters()
       .then(res => {
-        this.getRandom(res)
-          .then(obj => {
-            this.setState({
-              starter_id: obj.id,
-              starter: obj.sentencePart
-            })
-          })
+        const obj = this.getRandom(res)
+        this.setState({
+          starter_id: obj.id + 1,
+          starter: obj.sentenceStarter
+        })
+
         getFinishers(this.state.starter_id)
           .then(res => {
-            this.getRandom(res)
-              .then(obj => this.setState({
-                finisher: obj.sentencePart
-              }))
+            const finisher = this.getRandom(res)
+            this.setState({
+              finisher: finisher.sentenceFinisher
+            })
           })
       })
   }
@@ -40,7 +47,7 @@ state = {
   render () {
     return (
       <div>
-        <button onClick={this.generate}></button>
+        <button onClick={this.generate}>Generate</button>
       </div>
     )
   }
