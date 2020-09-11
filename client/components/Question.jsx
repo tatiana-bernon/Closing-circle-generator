@@ -45,8 +45,13 @@ export class Question extends Component {
   render () {
     return (
       <div>
-        <button onClick={this.generate}>Generate</button>
-        <h2>{this.state.starter} {this.state.noun} {this.state.finisher}</h2>
+        <div className='button is-link is-rounded is-large mt-6'>
+        <p onClick={this.generate}>Generate</p>
+        </div>
+        <div className=' is-size-1 mt-6 mx-6 px-6 has-text-centered'>
+        <i className='fas fa-quote-left'> {this.state.starter} {this.state.noun} {this.state.finisher} <i className='fas fa-quote-right'></i></i>
+        </div>
+
       </div>
     )
   }

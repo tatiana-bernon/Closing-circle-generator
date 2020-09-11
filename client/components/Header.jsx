@@ -4,7 +4,7 @@ export class Header extends Component {
   render () {
     return (
       <div>
-        <h1>Generate Random Closing Circle Question</h1>
+        <p className='title is-1 mp-6 has-text-white'>CLOSING Q.</p>
       </div>
     )
   }

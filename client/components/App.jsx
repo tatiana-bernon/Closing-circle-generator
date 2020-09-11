@@ -5,8 +5,10 @@ import Question from './Question'
 const App = () => {
   return (
     <>
+    <div className='container has-text-centered pt-6'>
     <Header/>
     <Question/>
+    </div>
     </>
   )
 }
