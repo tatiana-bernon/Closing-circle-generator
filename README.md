@@ -1,28 +1,29 @@
-# A starter webpack project for React
+# Closing Circle Question Generator
 
-This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
+> In EDA, everyday would end up with a closing circle with the most simple but yet unthinkable questions to end the day. Well, for this project, the team wanted to help the EDA Teaching team by creating a Closing Circle Question Generator!'
 
-* Fork this repo
-* Rename your repo according to the app you're building
+![alt text](https://github.com/pohutukawa-2020/GLTE/blob/dff111da58a49a95b279b2ba6f3f9eaa83510dec/server/public/glte.jpeg)
 
-```sh
-git clone https://github.com/[your-account]/[your-app].git
-cd [your-app] && npm i
+
+## Setup
+
+To get started, clone this repo and then:
+
 ```
-
-To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
-
-Additional components should be placed in `client/components`.
-
-## Separate client/server
-
-The boilerplate is also set up to host the client using `webpack-dev-server` with hot module reloading etc. To use this method, in one terminal run:
-```sh
-npm run client
+cd GLTE
+npm install
+npm run knex migrate:latest
+npm run knex seed:run
+npm run dev
+npm run dev
 ```
-and in the other:
-```sh
-npm run server
-```
-The client will be available on http://localhost:8080 and the server on http://localhost:3000. Note that you will still need to manage CORS between the two, as they are on different ports.
+If you have errors when starting to migrate tables; go to the code and delete SQLite3 file
 
+You can find the server running on [http://localhost:3000](http://localhost:3000).
+
+## REST API 
+NOTE: We wanted to use a resful API to be able to generate random nouns, however we were unable to find one which would work. In saying so, we decided to create a son file used to store our data to be used instead.
+
+
+### CSS 
+Bulma will be used in this project. Please refer to the documentation https://bulma.io/documentation/
