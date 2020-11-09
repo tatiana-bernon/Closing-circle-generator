@@ -15,7 +15,6 @@ npm install
 npm run knex migrate:latest
 npm run knex seed:run
 npm run dev
-npm run dev
 ```
 If you have errors when starting to migrate tables; go to the code and delete SQLite3 file
 
