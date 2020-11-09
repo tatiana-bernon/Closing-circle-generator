@@ -2,7 +2,7 @@
 
 > In EDA, everyday would end up with a closing circle with the most simple but yet unthinkable questions to end the day. Well, for this project, the team wanted to help the EDA Teaching team by creating a Closing Circle Question Generator!'
 
-![alt text](https://github.com/pohutukawa-2020/GLTE/blob/dff111da58a49a95b279b2ba6f3f9eaa83510dec/server/public/glte.jpeg)
+![alt text](https://github.com/tatiana-bernon/Closing-circle-generator/blob/a97568a5012a3ae054c416ec90866072ae1171a1/server/public/question.jpeg)
 
 
 ## Setup
